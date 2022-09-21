@@ -22,6 +22,9 @@ if (temp->next->n > number)
 {
 new->n = number;
 new->next->next = temp->next;
+temp = temp->next;
+new = new->next;
+continue;
 }
 new->n = temp->n;
 temp = temp->next;
