@@ -7,5 +7,5 @@ if __name__ == "__main__":
         print("{}".format(0))
     else:
         for i in range(1, len(sys.argv)):
-            sum = sum + sys.argv[i]  
-            print("{}".format(sum))
+            sum = sum + int(sys.argv[i])  
+        print("{}".format(sum))
