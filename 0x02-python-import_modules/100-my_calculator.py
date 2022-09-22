@@ -10,7 +10,7 @@ if __name__ == "__main__":
         print("Unknown operator. Available operators: +, -, * and /")
         exit(1)
     if argv[2] == "+":
-        print("{} + {} = {}".format(a, b, add(a, b)))
+        print("{} + {} = {}".format(argv[1], argv[2], add(argv[1], b)))
     elif argv[2] == "-":
         print("{} + {} = {}".format(a, b, sub(a, b)))
     elif argv[2] == "*":
