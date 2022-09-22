@@ -2,12 +2,10 @@
 if __name__ == "__main__":
     import sys
     n = len(sys.argv)
+    sum = 0
     if n == 1:
-        print("{} {}".format(n - 1, "arguments."))
+        print("{}".format(0))
     else:
-        if n == 2:
-            print("{} {}".format(n - 1, "argument:"))
-        else:
-            print("{} {}".format(n - 1, "arguments:"))
         for i in range(1, len(sys.argv)):
-            print("{}: {}".format(i, sys.argv[i]))
+            sum = sum + sys.argv[i]  
+            print("{}".format(sum))
