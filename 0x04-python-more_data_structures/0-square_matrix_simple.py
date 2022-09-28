@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 def square_matrix_simple(matrix=[]):
+    if matrix is None:
+        return None
     r = []
     for i in range(len(matrix)):
         k = list(map(lambda x: x[i]*x[i], matrix))
