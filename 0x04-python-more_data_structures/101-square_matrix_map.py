@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-def square_matrix_simple(matrix=[]):
+def square_matrix_map(matrix=[]):
     if matrix is None:
         return None
     r = []
