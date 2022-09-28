@@ -5,6 +5,6 @@ def update_dictionary(a_dictionary, key, value):
         if x == key:
             sum = 1
             a_dictionary[x] = value
-    if sum == 0
+    if sum == 0:
         a_dictionary[key] = value
     return a_dictionary
