@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def weight_average(my_list=[]):
     sum1 = 0
-    sum2 = 1
+    sum2 = 0
     mul = 1
     for i in range(len(my_list)):
         sum1 = sum1 + my_list[i][1]
