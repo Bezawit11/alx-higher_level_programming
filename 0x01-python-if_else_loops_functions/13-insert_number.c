@@ -20,15 +20,4 @@ while (temp->next != NULL)
 new->next = temp->next;
 if (temp->next->n > number)
 {
-new->n = number;
-new->next->next = temp->next;
-temp = temp->next;
-new = new->next;
-continue;
-}
-new->n = temp->n;
-temp = temp->next;
-new = new->next;
-}
-return (new);
-}
+new->n = num
