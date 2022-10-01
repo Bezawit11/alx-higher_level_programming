@@ -12,6 +12,8 @@ listint_t *c = *head, *f = *head, *g = *head;
 int l = 0, i, r;
 if (*head == NULL)
 return 1;
+if (f->next == NULL)
+return 1;
 while (g != NULL)
 {
 l++;
@@ -26,6 +28,7 @@ return 1;}
 f = f->next;
 c->next = NULL;
 r = is_palindrome(&f);}
-else
-return (0);
+else{
+return (0);}
+return r;
 }
