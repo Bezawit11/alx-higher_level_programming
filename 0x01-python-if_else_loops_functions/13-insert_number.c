@@ -16,9 +16,9 @@ listint_t *new, *c = *head, *g = *head;
 unsigned int i, l = 0;
 if (head == NULL)
 return (NULL);
-/*new = malloc(sizeof(listint_t));
+new = malloc(sizeof(listint_t));
 if (new == NULL)
-return (NULL);*/
+return (NULL);
 while (g != NULL)
 {
 l++;
