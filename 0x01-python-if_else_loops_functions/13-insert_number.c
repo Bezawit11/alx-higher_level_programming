@@ -31,13 +31,17 @@ break;
 }
 c = c->next;
 }
-if (i == l){
 new->n = number;
+if (i == l){
 new->next = NULL;
 c->next = new;
 return (*head);
 }
-new->n = number;
+if (i == 0){
+new->next = c;
+*head = new;
+return (*head);
+}
 new->next = c->next;
 c->next = new;
 return (*head);
