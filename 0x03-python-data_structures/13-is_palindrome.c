@@ -8,27 +8,21 @@
  */
 int is_palindrome(listint_t **head)
 {
-listint_t *c = *head, *f = *head, *g = *head;
-int l = 0, i, r;
+listint_t *c = *head, *f = *head;
+int i;
 if (*head == NULL)
 return 1;
-if (f->next == NULL)
-return 1;
-while (g != NULL)
-{
-l++;
-g = g->next;
-}
-for (i = 1; i < l - 1; i++){
+while (f->next != NULL){
+c = f;
+while (c->next->next != NULL){
 c = c->next;
 }
 if (f->n == c->next->n){
-if (f == c){
-return 1;}
 f = f->next;
 c->next = NULL;
-r = is_palindrome(&f);}
-else{
-return (0);}
-return r;
+}
+else
+return (0);
+}
+return 1;
 }
