@@ -5,7 +5,7 @@ def safe_print_list(my_list=[], x=0):
         try:
             print(my_list[i], end="")
             count = count + 1
-        except:
+        except Exception in error:
             break
     print()
-    return count;
+    return count
