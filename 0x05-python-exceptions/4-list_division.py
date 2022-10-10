@@ -12,8 +12,8 @@ def list_division(my_list_1, my_list_2, list_length):
                 print("out of range")
             elif my_list_2[i] == 0:
                 print("division by 0")
-            elif type(my_list_2[i])!= int and type(my_list_2[i])!= float:
+            elif type(my_list_2[i]) != int and type(my_list_2[i]) != float:
                 print("wrong type")
-            elif type(my_list_1[i])!= int and type(my_list_1[i])!= float:
+            elif type(my_list_1[i]) != int and type(my_list_1[i]) != float:
                 print("wrong type")
     return list
