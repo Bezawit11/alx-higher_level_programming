@@ -6,16 +6,16 @@ class Square:
     """defines a square class"""
     
     def __init__(self, size=0):
-        """Constructor
+        """Constructor.
         
         Args: 
             size: size of a square
+            
         Raises:
             ValueError: if the size is negative
+            TypeError: if size is not an integer
          """
         if int(size) < 0:
             raise ValueError("size must be >= 0")
-        try:
-            self.__size = size
-        except TypeError in e:
-            print(e)
+        if not isinstance(size, int):
+            raise TypeError("size must be an integer")
