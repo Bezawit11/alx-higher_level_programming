@@ -4,7 +4,7 @@
 
 class Square:
     """Defines a square class"""
-    def __init__(self, size=0):
+    def __init__(self, size=0, position=(0, 0)):
         """Constructor.
         Args:
             size: size of a square.
@@ -13,6 +13,7 @@ class Square:
             ValueError: If size is negative.
         """
         self.__size = size
+        self.__position = position
         if int(size) < 0:
             raise ValueError("size must be >= 0")
         if not isinstance(size, int):
