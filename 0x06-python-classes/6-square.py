@@ -67,7 +67,9 @@ class Square:
         """Prints a square with '#' character"""
         if self.__size == 0:
             print()
-        for i in range(self.__size):
+        else:
+            i, j = 0, 0
+            for i in range(self.__position[1]):
+                print()
             for j in range(self.__size):
-                print("#", end="")
-            print()
+                print("{}{}".format(" " * self.__position[0], "#" * self.__size))
