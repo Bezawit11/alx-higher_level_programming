@@ -26,3 +26,20 @@ class SinglyLinkedList:
             if self.__head is None:
                 new.next_node = None
                 self.__head = new
+            elif self.__head.data >= value:
+                new.next_node = self.__head
+                self.__head = new
+                return self.__head
+            else:
+                tra = self.__head
+                while (tra.next_node is not None and tra.next_node.data < value):
+                    tra = tra.next_node
+                new.next_node = tra.next_node
+                tra.next_node = new
+        def __str__(self):
+            list = []
+            tra = self.__head
+            while tra is not None:
+                list.append(str(tra.data))
+                tra = tra.next_node
+            return ('\n'.join(list))            
