@@ -44,7 +44,7 @@ class Square:
         Raises:
             TypeError: if size is not an integer.
         """
-       return self.__position
+        return self.__position
     @position.setter
     def position(self, value):
          """setter of value to the position of a square.
