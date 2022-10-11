@@ -18,6 +18,7 @@ class Square:
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
         self.__size = size
+
     @property
     def size(self):
         """Properties for the size of a square.
@@ -26,6 +27,7 @@ class Square:
             ValueError: If size is negative.
         """
         return self.__size
+
     @size.setter
     def size(self, value):
         """setter of value to a size of a square.
@@ -38,6 +40,7 @@ class Square:
         if int(value) < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
+
     def area(self):
         """Area of a square.
         Returns:
