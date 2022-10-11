@@ -4,13 +4,10 @@
 
 class Square:
     """defines a square class"""
-    
     def __init__(self, size=0):
         """Constructor.
-        
-        Args: 
+        Args:
             size: size of a square
-            
         Raises:
             ValueError: if the size is negative
             TypeError: if size is not an integer
