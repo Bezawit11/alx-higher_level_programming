@@ -81,7 +81,8 @@ class Square:
                     print(" ", end="")
                 for z in range(self.__size):
                     print("#",end="")
-                print()
+                if i < self.__size - 1:
+                    print()
     def __str__(self):
         if self.__size == 0:
             print()
@@ -91,5 +92,6 @@ class Square:
                         print(" ", end="")
                     for z in range(self.__size):
                         print("#",end="")
-                    print()
+                    if i < self.__size - 1:
+                        print()
         return ("")   
