@@ -18,7 +18,11 @@ class Square:
             raise ValueError("size must be >= 0")
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
-        self.__size = size
+        if not isinstance(position, tuple):
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if len(position) != 2 or type(position[0]) != int or type(position[1]) != int or position[0] < 0 or position[1] < 0:
+            raise TypeError("position must be a tuple of 2 positive integers")
+    
     @property
     def size(self):
         """Properties for the size of a square.
@@ -27,6 +31,7 @@ class Square:
             ValueError: If size is negative.
         """
         return self.__size
+    
     @size.setter
     def size(self, value):
         """setter of value to a size of a square.
@@ -39,6 +44,7 @@ class Square:
         if int(value) < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
+    
     @property
     def position(self):
         """Properties for the position of a square.
@@ -46,6 +52,7 @@ class Square:
             TypeError: if size is not an integer.
         """
         return self.__position
+    
     @position.setter
     def position(self, value):
         """setter of value to the position of a square.
@@ -56,14 +63,14 @@ class Square:
             if isinstance(value[0], int) and isinstance(value[1], int):
                 if value[0] >= 0 and value[1] >= 0:
                     self.__position = value
-        else:
-            raise TypeError("position must be tuple of 2 positive integers")
+    
     def area(self):
         """Area of a square.
         Returns:
             the area.
         """
         return self.__size * self.__size
+    
     def my_print(self):
         """Prints a square with '#' character"""
         if self.__size == 0:
@@ -75,3 +82,14 @@ class Square:
                 for z in range(self.__size):
                     print("#",end="")
                 print()
+    def __str__(self):
+        if self.__size == 0:
+            print()
+        else:
+            for i in range(self.__size):
+                    for j in range(self.__position[0]):
+                        print(" ", end="")
+                    for z in range(self.__size):
+                        print("#",end="")
+                    print()
+            return ("")       
