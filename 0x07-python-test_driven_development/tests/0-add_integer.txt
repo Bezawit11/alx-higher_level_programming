@@ -1,39 +1,46 @@
-The 0-add_integer test module.
-================================
+===============================
+ How to Use 0-add_integer.py
+===============================
 
-Using "add_integer"
-=================================
+This module defines an integer/float addition function ``add_integer(a, b=98)``.
 
-Import function from module:
+Function usage
+==============
+``add_integer(a, b=98)`` returns the sum of two args
 
-	>>> add_integer = __import__('0-add_integer').add_integer
+Handling integers and floats
 	
-Test 1 handle integers:
+::
+	>>> add_integer = __import__('0-add_integer').add_integer
 	>>>add_integer(3, 2)
 	5
 	
-Test 2 handle floats:
+::
 	>>>add_integer(3.2, 2.5)
 	5
-	
-Test 3 handle 1 string:
+
+Handling strings
+
+::
 	>>>add_integer(2, "f")
 	Traceback (most recent call last):
 	...
 	TypeError: b must be an integer.
 	
-Test 4 handle 1 string:
+::
 	>>>add_integer("h", 4)
 	Traceback (most recent call last):
 	...
 	TypeError: a must be an integer.
 	
-Test 5 handle 2 strings:
+::
 	>>>add_integer("hell", "o")
 	Traceback (most recent call last):
         ...
         TypeError: a must be an integer.
-	
-Test 6 take 1 argument:
+
+Handling one argument
+
+::
 	>>>add_integer(3)
 	101
