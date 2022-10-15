@@ -1,0 +1,33 @@
+doctest for 0-add_integer module
+================================
+our module divides matrix elements
+=================================
+Importing module:
+	>>>add_integer = __import__('0-add_integer').add_integer
+Test 1: handle integers
+	>>>add_integer(3, 2)
+	5
+Test 1.1: handle negative integers
+	>>>add_integer(
+Test 2: handle floats
+	>>>add_integer(3.2, 2.5)
+	5
+Test 3: handle 1 string
+	>>>add_integer(2, "f")
+	Traceback (most recent call last):
+	...
+	TypeError: b must be an integer.
+Test 4: handle 1 string
+	>>>add_integer("h", 4)
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer.
+Test 5: handle 2 strings
+	>>>add_integer("hell", "o")
+	Traceback (most recent call last):
+        ...
+        TypeError: a must be an integer.
+Test 6: take 1 argument
+	>>>add_integer(3)
+	101
+Test 7: 
