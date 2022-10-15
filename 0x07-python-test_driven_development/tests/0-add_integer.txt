@@ -1,40 +1,32 @@
-===============================
- How to Use 0-add_integer.py
-===============================
+# 0-add_integer.txt
 
-This module defines an integer/float addition function ``add_integer(a, b=98)``.
+``add_integer()`` returns the sum of two integers.
+value is equivalent to using the ``+`` operator.
 
-Function usage
-==============
-``add_integer(a, b=98)`` returns the sum of two args
-
-Handling integers and floats
 	
 ::
-	>>> add_integer = __import__('0-add_integer').add_integer
-	
+
+Handling integers and floats
+
+	>>> add_integer = __import__('0-add_integer').add_integer	
 	>>>add_integer(3, 2)
 	5
 	
-::
-	>>>add_integer(3.2, 2.5)
-	5
+	>>>add_integer(5.2, 2.5)
+	7
 
 Handling strings
 
-::
 	>>>add_integer(2, "f")
 	Traceback (most recent call last):
 	...
 	TypeError: b must be an integer.
 	
-::
 	>>>add_integer("h", 4)
 	Traceback (most recent call last):
 	...
 	TypeError: a must be an integer.
 	
-::
 	>>>add_integer("hell", "o")
 	Traceback (most recent call last):
         ...
@@ -42,6 +34,5 @@ Handling strings
 
 Handling one argument
 
-::
 	>>>add_integer(3)
 	101
