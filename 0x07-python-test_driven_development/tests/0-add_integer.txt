@@ -1,22 +1,22 @@
-# 0-add_integer.txt
+The ``0-add_integer`` module
+============================
 
 ``add_integer()`` returns the sum of two integers.
 value is equivalent to using the ``+`` operator.
+===================================================
 
-	
+Importing the function from the module:
+	>>> add_integer = __import__('0-add_integer').add_integer	
 ::
 
-Handling integers and floats
-
-	>>> add_integer = __import__('0-add_integer').add_integer	
-	>>>add_integer(3, 2)
+Handling integers and floats:
+		>>>add_integer(3, 2)
 	5
 	
 	>>>add_integer(5.2, 2.5)
 	7
 
-Handling strings
-
+Handling strings:
 	>>>add_integer(2, "f")
 	Traceback (most recent call last):
 	...
@@ -32,7 +32,6 @@ Handling strings
         ...
         TypeError: a must be an integer.
 
-Handling one argument
-
+Handling one argument:
 	>>>add_integer(3)
 	101
