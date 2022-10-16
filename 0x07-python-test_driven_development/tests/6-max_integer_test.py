@@ -20,19 +20,19 @@ class TestMaxInteger(unittest.TestCase):
     def test_all_negative(self):
         n = [-2, -5, -7, -4]
         self.assertEqual(max_integer(n), -2)
-        
+
     def test_string(self):
         o = [1, "2", 8, 3]
         with self.assertRaises(TypeError):
             max_integer(o)
-            
+    
     def test_empty(self):
         p = []
         self.assertIsNone(max_integer(p))
-        
+    
     def test_no_args(self):
         self.assertIsNone(max_integer())
-        
+    
     def test_morethan_1_args(self):
         a = [1, 2, 8, 3]
         b = [1, 2, 3]
