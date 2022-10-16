@@ -24,7 +24,16 @@ class TestMaxInteger(unittest.TestCase):
             
     def test_empty(self):
         p = []
-        self.assertEqual(max_integer(p), None)
+        self.assertIsNone(max_integer(p))
+        
+    def test_no_args(self):
+        self.assertIsNone(max_integer())
+        
+    def test_morethan_1_args(self):
+        a = [1, 2, 8, 3]
+        b = [1, 2, 3]
+        with self.assertRaises(TypeError)
+            max_integer(a, b)
         
 if __name__ == '__main__':
     unittest.main()
