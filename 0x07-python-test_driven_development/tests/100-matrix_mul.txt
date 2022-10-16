@@ -1,9 +1,12 @@
-The ``2-matrix_divided`` module
-
+The ``100-matrix_mul`` module
 ======================
 
+Using ``matrix_mul``
+--------------------
 
-
-Using ``matrix_divided``
-
--------------------
+Importing the function from the module:
+        >>> matrix_mul = __import__('100-matrix_mul').matrix_mul
+        
+Handling two list of lists:
+         >>> matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]])
+         [[7, 10], [15, 22]]
