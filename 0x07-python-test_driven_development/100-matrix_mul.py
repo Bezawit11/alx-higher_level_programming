@@ -34,4 +34,5 @@ def matrix_mul(m_a, m_b):
             ins.append(sum)
             sum = 0
         lists.append(ins)
+        ins = []
     return lists
