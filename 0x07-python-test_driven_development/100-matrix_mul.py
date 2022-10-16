@@ -32,7 +32,7 @@ def matrix_mul(m_a, m_b):
                     raise TypeError("m_a should contain only integers or floats")
                 if not isinstance(m_b[i][h], int) and not isinstance(m_b[i][h], float):
                     raise TypeError("m_b should contain only integers or floats")
-                sum = sum + m_a[i][h] * m_b[h][j]
+                sum = sum + (m_a[i][h] * m_b[h][j])
             ins.append(sum)
             sum = 0
         lists.append(ins)
