@@ -28,6 +28,10 @@ def matrix_mul(m_a, m_b):
     for i in range(len(m_a)):
         for j in range(len(m_b[0])):
             for h in range(len(m_b)):
+                if not isinstance(m_a[i][h], int) and not isinstance(m_a[i][h], float):
+                    raise TypeError("m_a should contain only integers or floats")
+                if not isinstance(m_b[i][h], int) and not isinstance(m_b[i][h], float):
+                    raise TypeError("m_b should contain only integers or floats")
                 sum += m_a[i][h] * m_b[h][j]
             ins.append(sum)
             sum = 0
