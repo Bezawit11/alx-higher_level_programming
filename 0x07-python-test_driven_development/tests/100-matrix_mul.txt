@@ -10,3 +10,53 @@ Importing the function from the module:
 Handling two list of lists:
          >>> matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]])
          [[7, 10], [15, 22]]
+        
+Handling non-int in first arg:
+         >>> matrix_mul([[1, "2"], [3, 4]], [[1, 2], [3, 4]])
+         Traceback (most recent call last):
+         ...
+         TypeError: m_a should contain only integers or floats
+         
+Handling non-int in second arg:
+         >>> matrix_mul([[1, 2], [3, 4]], [[1, 2], ["3", 4]])
+         Traceback (most recent call last):
+         ...
+         TypeError: m_b should contain only integers or floats
+        
+Handling empty lists - first arg:
+         >>> matrix_mul([[]], [[1, 2], [3, 4]])
+         Traceback (most recent call last):
+         ...
+         ValueError: m_a can't be empty
+         
+Handling empty lists - second arg:
+         >>> matrix_mul([[1, 2], [3, 4]], [[]])
+         Traceback (most recent call last):
+         ...
+         ValueError: m_b can't be empty
+         
+Handling a non-list arg:
+         >>> matrix_mul(1, [[1, 2], [3, 4]])
+         Traceback (most recent call last):
+         ...
+         TypeError: m_a must be a list
+         
+Handling 0 arg:
+         >>> matrix_mul()
+         Traceback (most recent call last):
+         ...
+         TypeError: matrix_mul() missing 2 required positional arguments: 'm_a' and 'm_b'
+        
+Handling 1 args:
+         >>> matrix_mul([[1, 2], [3, 4]])
+         Traceback (most recent call last):
+         ...
+         TypeError: matrix_mul() missing 1 required positional argument: 'm_b'
+         
+Handling more than 2 args:
+         >>> matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]], [[1, 2], [3, 4]])
+         Traceback (most recent call last):
+         ...
+         TypeError: matrix_mul() takes 2 positional arguments but 3 were given
+         
+         
