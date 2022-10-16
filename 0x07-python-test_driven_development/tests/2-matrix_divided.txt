@@ -48,6 +48,7 @@ Handling a div with a zero value:
          Traceback (most recent call last):
          ...
          ZeroDivisionError: division by zero
+         
 Handling an empty matrix:
          >>> matrix_divided([], 2)
          []
