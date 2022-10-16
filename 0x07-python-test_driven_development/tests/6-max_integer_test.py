@@ -20,7 +20,7 @@ class TestMaxInteger(unittest.TestCase):
     def test_string(self):
         o = [1, "2", 8, 3]
         with self.assertRaises(TypeError)
-            max_integer(string)
+            max_integer(o)
             
     def test_empty(self):
         p = []
