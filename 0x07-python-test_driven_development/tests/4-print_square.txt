@@ -1,2 +1,34 @@
-The ``0-add_integer`` module
+The ``4-print_square`` module
 ======================
+
+Using ``print_square``
+-------------------
+
+Importing the function from the module:
+        >>> print_square = __import__("4-print_square").print_square
+        
+Handling a positive integer:
+         >>> print_square(3)
+         ###
+         ###
+         ###
+         
+
+Handling a negative integer:
+         >>> print_square(-2)
+         Traceback (most recent call last):
+         ...
+         ValueError: size must be >= 0
+         
+Handling a string arg:
+         >>> print_square("2")
+         Traceback (most recent call last):
+         ...
+         TypeError: size must be an integer
+         
+Handling a float arg:
+         >>> print_square(2.1) 
+         Traceback (most recent call last):
+         ...
+         TypeError: size must be an integer
+ 
