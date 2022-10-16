@@ -27,21 +27,9 @@ Handling int and float:
 	 >>> add_integer(3, 7.1)
 	 10
 
-Checking for passed NaN:
-	 >>> add_integer(1, float('nan'))
-	 Traceback (most recent call last):
-	 ...
-	 ValueError: cannot convert float NaN to integer
-
-Checking for passed inf:
-	 >>> add_integer(1, float('inf'))
-	 Traceback (most recent call last):
-	 ...
-	 OverflowError: cannot convert float infinity to integer
-
-Checking super long int:
-	 >>> add_integer(999999999999999999999999999999, 1)
-	 1000000000000000000000000000000
+Handling long int:
+	 >>> add_integer(10, 99999999999999999999999999999)
+	 100000000000000000000000000009
 
 Handling a string first arg:
 	 >>> add_integer("a", 2)
@@ -60,3 +48,13 @@ Handling a string for first and second arg:
          Traceback (most recent call last):
          ...
          TypeError: a must be an integer
+
+Handling only one arg:
+	 >>> add_integer(2)
+	 100
+	 
+Handling more than two args:
+	 >>> add_integer(1, 2, 3)
+	 Traceback (most recent call last):
+	 ...
+	 TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
