@@ -31,7 +31,7 @@ class Rectangle:
             TypeError: if width is not an integer.
             ValueError: If width is negative.
         """
-        
+
         return self.__width
 
     @width.setter
@@ -60,14 +60,14 @@ class Rectangle:
             ValueError: If height is negative.
         """
         self.__height = value
-        
+
     def area(self):
         """Area of a rectangle.
         Returns:
             the area.
         """
         return self.__width * self.__height
-      
+
     def perimeter(self):
         """Perimeter of a rectangle.
         Returns:
@@ -76,7 +76,7 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return 0
         return 2 * (self.__width + self.__height)
-    
+
     def __str__(self):
         """Return the printable representation of the Rectangle.
         Represents the rectangle with the # character.
@@ -90,4 +90,3 @@ class Rectangle:
             if i < self.__height - 1:
                 s = s + '\n'
         return s
-    
