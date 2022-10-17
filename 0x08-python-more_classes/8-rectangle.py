@@ -103,14 +103,14 @@ class Rectangle:
         """Prints a message when an instance is deleted"""
         print("Bye rectangle...")
         type(self).number_of_instances -= 1
-        
+
     def bigger_or_equal(rect_1, rect_2):
         """Returns the biggest Rectangle.
         Args:
             rect_1 (Rectangle): The first Rectangle.
             rect_2 (Rectangle): The second Rectangle.
         Raises:
-            TypeError: rect_1 or rect_2 is not an instance of the class.    
+            TypeError: rect_1 or rect_2 is not an instance of the class.
         """
         if not isinstance(rect_1, Rectangle):
             raise TypeError("rect_1 must be an instance of Rectangle")
