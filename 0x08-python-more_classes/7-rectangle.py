@@ -6,6 +6,7 @@ class Rectangle:
     """Defines a Rectangle class"""
     number_of_instances = 0
     print_symbol = "#"
+
     def __init__(self, width=0, height=0):
         """Constructor.
         Args:
@@ -25,7 +26,8 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         self.__width = width
         self.__height = height
-        type(self).number_of_instances -= 1
+        type(self).number_of_instances += 1
+
     @property
     def width(self):
         """Properties for the width of a rectangle.
@@ -33,7 +35,7 @@ class Rectangle:
             TypeError: if width is not an integer.
             ValueError: If width is negative.
         """
-        
+
         return self.__width
 
     @width.setter
@@ -62,23 +64,25 @@ class Rectangle:
             ValueError: If height is negative.
         """
         self.__height = value
-        
+
     def area(self):
         """Area of a rectangle.
         Returns:
             the area.
         """
         return self.__width * self.__height
-      
+
     def perimeter(self):
         """Perimeter of a rectangle.
         Returns:
             the perimeter.
         """
+        if self.__width == 0 or self.__height == 0:
+            return 0
         return 2 * (self.__width + self.__height)
-    
+
     def __str__(self):
-        """Returns the representation of the Rectangle.
+        """Return the printable representation of the Rectangle.
         Represents the rectangle with the # character.
         """
         if self.__height == 0 or self.__width == 0:
@@ -87,15 +91,15 @@ class Rectangle:
         for i in range(self.__height):
             for j in range(self.__width):
                 s = s + str(self.print_symbol)
-            s = s + '\n'
+            if i < self.__height - 1:
+                s = s + '\n'
         return s
-    
+
     def __repr__(self):
-        """Return the official string representation of the Rectangle.""" 
+        """Return the official string representation of the Rectangle."""
         return f'Rectangle({self.__width}, {self.__height})'
-    
+
     def __del__(self):
         """Prints a message when an instance is deleted"""
         print("Bye rectangle...")
         type(self).number_of_instances -= 1
-     
