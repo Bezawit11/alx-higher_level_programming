@@ -26,12 +26,8 @@ class Rectangle:
 
     @property
     def width(self):
-        """Properties for the width of a rectangle.
-        Raises:
-            TypeError: if width is not an integer.
-            ValueError: If width is negative.
+        """returns the width of a rectangle.
         """
-        
         return self.__width
 
     @width.setter
@@ -41,14 +37,15 @@ class Rectangle:
             TypeError: if width is not an integer.
             ValueError: If width is negative.
         """
+        if not isinstance(value, int):
+            raise TypeError("width must be an integer")
+        if value < 0:
+            raise ValueError("width must be >= 0")
         self.__width = value
 
     @property
     def height(self):
-        """Properties for the height of a rectangle.
-        Raises:
-            TypeError: if height is not an integer.
-            ValueError: If height is negative.
+        """returns the height of a rectangle.
         """
         return self.__height
 
@@ -59,6 +56,10 @@ class Rectangle:
             TypeError: if height is not an integer.
             ValueError: If height is negative.
         """
+        if not isinstance(value, int):
+            raise TypeError("height must be an integer")
+        if value < 0:
+            raise ValueError("height must be >= 0")
         self.__height = value
         
     def area(self):
