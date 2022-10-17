@@ -124,7 +124,7 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
-      """
-      class method: creates a square, which is a type of rectangle
-      """
-      return cls(size, size)
+        """
+        class method: creates a square, which is a type of rectangle
+        """
+        return cls(size, size)
