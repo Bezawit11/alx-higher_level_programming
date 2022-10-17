@@ -30,8 +30,7 @@ class Rectangle:
         Raises:
             TypeError: if width is not an integer.
             ValueError: If width is negative.
-        """
-        
+        """      
         return self.__width
 
     @width.setter
@@ -41,6 +40,10 @@ class Rectangle:
             TypeError: if width is not an integer.
             ValueError: If width is negative.
         """
+        if not isinstance(width, int):
+            raise TypeError("width must be an integer")
+        if int(value) < 0:
+            raise ValueError("width must be >= 0")
         self.__width = value
 
     @property
@@ -59,4 +62,8 @@ class Rectangle:
             TypeError: if height is not an integer.
             ValueError: If height is negative.
         """
+        if not isinstance(height, int):
+            raise TypeError("height must be an integer")
+        if int(value) < 0:
+            raise ValueError("height must be >= 0")
         self.__height = value
