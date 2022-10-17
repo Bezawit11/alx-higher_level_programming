@@ -62,17 +62,29 @@ class Rectangle:
         self.__height = value
         
     def area(self):
-      """Area of a rectangle.
+        """Area of a rectangle.
         Returns:
             the area.
         """
         return self.__width * self.__height
       
     def perimeter(self):
-      """Perimeter of a rectangle.
+        """Perimeter of a rectangle.
         Returns:
             the perimeter.
         """
         return 2 * (self.__width + self.__height)
-      
+    
+    def __str__(self):
+        """Return the printable representation of the Rectangle.
+        Represents the rectangle with the # character.
+        """
+        if self.__height == 0 or self.__width == 0:
+            return ("")
+        s = ""
+        for i in range(self.__height):
+            for j in range(self.__width):
+                s = s + "#"
+            s = s + '\n'
+        return s
     
