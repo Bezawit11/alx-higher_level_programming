@@ -1,5 +1,21 @@
 #!/usr/bin/python3
+"""Defines a matrix division function."""
+
+
 def matrix_divided(matrix, div):
+    """Divide all elements of a matrix.
+
+    Args:
+        matrix : A list of lists of ints or floats.
+        div : The divisor.
+    Raises:
+        TypeError: If the matrix contains non-integers or non-floats.
+        TypeError: If the matrix contains rows of different length.
+        TypeError: If div is not an int or float.
+        ZeroDivisionError: If div is 0.
+    Returns:
+        A new matrix representing the result of the division.
+    """
     mylist = []
     ins = []
     if not isinstance(div, int) and not isinstance(div, float):
