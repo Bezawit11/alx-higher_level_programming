@@ -17,6 +17,18 @@ Handling non-int in first arg:
          ...
          TypeError: m_a should contain only integers or floats
          
+ Handling rows of different size:
+         >>> matrix_mul([[1, 2], [3, 4]], [[2, 3], [4, 5, 6]])
+         Traceback (most recent call last):
+         ...
+         TypeError: each row of m_b must should be of the same size
+         
+ Handling rows of different size:
+         >>> matrix_mul([[1, 2], [3, 4, 5]], [[2, 3], [4, 5]])
+         Traceback (most recent call last):
+         ...
+         TypeError: each row of m_a must should be of the same size
+         
 Handling non-int in second arg:
          >>> matrix_mul([[1, 2], [3, 4]], [[1, 2], ["3", 4]])
          Traceback (most recent call last):
@@ -40,6 +52,18 @@ Handling a non-list arg:
          Traceback (most recent call last):
          ...
          TypeError: m_a must be a list
+
+Handling a string second arg:
+         >>> matrix_mul([[1, 2], [3, 4]], "hi")
+         Traceback (most recent call last):
+         ...
+         TypeError: m_b must be a list
+         
+Handling lists that cant be multiplied:
+         >>> matrix_mul([[1, 2], [3, 4]], [[2, 3], [4, 5], [7, 1]])
+         Traceback (most recent call last):
+         ...
+         ValueError: m_a and m_b can't be multiplied
          
 Handling 0 arg:
          >>> matrix_mul()
@@ -58,5 +82,4 @@ Handling more than 2 args:
          Traceback (most recent call last):
          ...
          TypeError: matrix_mul() takes 2 positional arguments but 3 were given
-         
          
