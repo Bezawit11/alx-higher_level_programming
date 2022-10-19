@@ -21,6 +21,10 @@ class TestMaxInteger(unittest.TestCase):
         n = [-2, -5, -7, -4]
         self.assertEqual(max_integer(n), -2)
 
+    def test_max_at_the_end(self):
+        n = [1, 2, 3, 4]
+        self.assertEqual(max_integer(n), 4)
+
     def test_string(self):
         o = [1, "2", 8, 3]
         with self.assertRaises(TypeError):
