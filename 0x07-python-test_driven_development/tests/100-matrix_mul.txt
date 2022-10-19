@@ -64,3 +64,9 @@ Handling lists that cant be multiplied:
          Traceback (most recent call last):
          ...
          ValueError: m_a and m_b can't be multiplied
+         
+Handling a string second arg:
+         >>> matrix_mul([[1, 2], [3, 4]], "hi")
+         Traceback (most recent call last):
+         ...
+         TypeError: m_b must be a list
