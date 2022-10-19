@@ -1,5 +1,9 @@
 #!/usr/bin/python3
+"""Defines a function that multiplies a matrix"""
+
+
 def matrix_mul(m_a, m_b):
+    
     sum = 0
     lists = []
     ins = []
