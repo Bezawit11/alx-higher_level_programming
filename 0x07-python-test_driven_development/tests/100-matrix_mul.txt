@@ -58,4 +58,9 @@ Handling more than 2 args:
          Traceback (most recent call last):
          ...
          TypeError: matrix_mul() takes 2 positional arguments but 3 were given
-         
+
+Handling lists that cant be multiplied:
+         >>> matrix_mul([[1, 2], [3, 4]], [[2, 3], [4, 5], [7, 1]])
+         Traceback (most recent call last):
+         ...
+         ValueError: m_a and m_b can't be multiplied
