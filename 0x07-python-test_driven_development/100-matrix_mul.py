@@ -35,10 +35,10 @@ def matrix_mul(m_a, m_b):
     b = len(m_b[0])
     for i in range(len(m_a)):
         if len(m_a[i]) != a:
-            raise TypeError("each row of the matrix must have the same size")
+            raise TypeError("each row of m_a must be of the same size")
     for i in range(len(m_b)):
         if len(m_b[i]) != b:
-            raise TypeError("each row of the matrix must have the same size")
+            raise TypeError("each row of m_b must be of the same size")
     if len(m_a[len(m_a) - 1]) != len(m_b):
         raise ValueError("m_a and m_b can't be multiplied")
     for i in range(len(m_a)):
