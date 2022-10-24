@@ -33,17 +33,16 @@ Handling NaN value:
 
 	 >>> bg.integer_validator("my_int", NaN)
 	 Traceback (most recent call last):
+	 ...
+	 NameError: name 'NaN' is not defined
 	 
 Handling a non-integer:
 	 >>> bg = BaseGeometry()
 
 	 >>> bg.integer_validator("my_int", "str")
 	 Traceback (most recent call last):
-	 Traceback (most recent call last):
 	 ...
 	 TypeError: my_int must be an integer
-	     ...
-	 NameError: name 'NaN' is not defined
 
 Handling None object:
 	 >>> bg = BaseGeometry()
