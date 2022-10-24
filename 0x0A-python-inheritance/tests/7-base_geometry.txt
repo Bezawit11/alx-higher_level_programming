@@ -1,1 +1,80 @@
-w
+The ``7-base_geometry`` module
+======================
+
+Using ``base_geometry``
+-------------------
+
+Importing the function from the module:
+	>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Handling positive integers:
+	 >>> my_list = MyList()
+	 
+	 >>> my_list.append(4)
+	 
+	 >>> my_list.append(5)
+	 
+	 >>> my_list.append(2)
+	 
+	 >>> my_list.append(3)
+	 
+	 >>> my_list.append(1)
+	 
+	 >>> print(my_list)
+	 [4, 5, 2, 3, 1]
+	 
+	 >>> my_list.print_sorted()
+	 [1, 2, 3, 4, 5]
+
+Handling negative integers:
+	>>> my_list = MyList()
+	
+	>>> my_list.append(4)
+	 
+	 >>> my_list.append(-5)
+	 
+	 >>> my_list.append(2)
+	 
+	 >>> my_list.append(3)
+	 
+	 >>> my_list.append(1)
+	 
+	 >>> print(my_list)
+	 [4, -5, 2, 3, 1]
+	 
+	 >>> my_list.print_sorted()
+	 [-5, 1, 2, 3, 4]
+	 
+Handling NULL bject:
+
+	 >>> my_list = MyList()
+
+	 >>> my_list.append(NULL)
+	 Traceback (most recent call last):
+	     ...
+	 NameError: name 'NULL' is not defined
+	 
+Handling NaN object:
+	 >>> my_list = MyList()
+
+	 >>> my_list.append(NaN)
+	 Traceback (most recent call last):
+	     ...
+	 NameError: name 'NaN' is not defined
+
+	 >>> print(my_list)
+	 []
+
+	 >>> my_list.print_sorted()
+	 []
+
+Handling None object:
+	 >>> my_list = MyList()
+
+	 >>> my_list.append(None)
+
+	 >>> print(my_list)
+	 [None]
+
+	 >>> my_list.print_sorted()
+	 [None]
