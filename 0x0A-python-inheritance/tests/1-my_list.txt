@@ -44,3 +44,12 @@ Handling negative integers:
 	 
 	 >>> my_list.print_sorted()
 	 [-5, 1, 2, 3, 4]
+	 
+Handling NULL bject:
+
+	 >>> my_list = MyList()
+
+	 >>> my_list.append(NULL)
+	 Traceback (most recent call last):
+	     ...
+	 NameError: name 'NULL' is not defined
