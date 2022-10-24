@@ -1,4 +1,4 @@
-#include <python.h>
+#include <Python.h>
 #include <stdio.h>
 
 /**
@@ -16,7 +16,7 @@ l = (unsigned int) PyList_Size(p);
 allocated = (unsigned int) ((PyListObject *)p)->allocated;
 printf("[*] Size of the Python List = %d\n", l);
 printf("[*] Allocated = %d\n", allocated);
-for (idx = 0; idx < len; idx++)
+for (idx = 0; idx < l; idx++)
 {
 type = PyList_GET_ITEM(p, idx)->ob_type;
 name = type->tp_name;
