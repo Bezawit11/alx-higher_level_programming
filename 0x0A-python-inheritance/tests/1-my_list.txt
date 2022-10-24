@@ -1,1 +1,72 @@
-the
+The ``1-my_list`` module
+======================
+
+Using ``my_list``
+-------------------
+
+Importing the function from the module:
+	>>> MyList = __import__('1-my_list').MyList
+
+Handling positive integers:
+	 >>> add_integer(3, 4)
+	 7
+
+Handling negative integers:
+	 >>> 
+	 -7
+
+Handling negative and positive integers:
+	 >>> add_integer(-5, 8)
+	 3
+
+Handling floats:
+	 >>> add_integer(1.2, 4.7)
+	 5
+
+Handling int and float:
+	 >>> add_integer(3, 7.1)
+	 10
+
+Handling long int:
+	 >>> add_integer(10, 99999999999999999999999999999)
+	 100000000000000000000000000009
+
+Handling a string first arg:
+	 >>> add_integer("a", 2)
+	 Traceback (most recent call last):
+	 ...
+	 TypeError: a must be an integer
+
+Handling a string second arg:
+	 >>> add_integer(4, "b")
+	 Traceback (most recent call last):
+	 ...
+	 TypeError: b must be an integer
+	
+Handling float overflow:
+	 >>> add_integer(float('inf'))
+	 Traceback (most recent call last):
+	 ...
+    	 OverflowError: cannot convert float infinity to integer
+	 
+Handling Nan:
+	 >>> add_integer(float('nan'))
+    	 Traceback (most recent call last):
+	 ...
+    	 ValueError: cannot convert float NaN to integer
+	 
+Handling a string for first and second arg:
+	 >>> add_integer("a", "b")
+         Traceback (most recent call last):
+         ...
+         TypeError: a must be an integer
+
+Handling only one arg:
+	 >>> add_integer(2)
+	 100
+	 
+Handling more than two args:
+	 >>> add_integer(1, 2, 3)
+	 Traceback (most recent call last):
+	 ...
+	 TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
