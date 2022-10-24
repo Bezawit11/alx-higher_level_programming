@@ -8,6 +8,8 @@ Importing the function from the module:
 	>>> MyList = __import__('1-my_list').MyList
 
 Handling positive integers:
+	 >>> my_list = MyList()
+	 
 	 >>> my_list.append(4)
 	 
 	 >>> my_list.append(5)
@@ -25,6 +27,8 @@ Handling positive integers:
 	 [1, 2, 3, 4, 5]
 
 Handling negative integers:
+	>>> my_list = MyList()
+	
 	>>> my_list.append(4)
 	 
 	 >>> my_list.append(-5)
@@ -36,7 +40,7 @@ Handling negative integers:
 	 >>> my_list.append(1)
 	 
 	 >>> print(my_list)
-	 [4, 5, 2, 3, 1]
+	 [4, -5, 2, 3, 1]
 	 
 	 >>> my_list.print_sorted()
 	 [-5, 1, 2, 3, 4]
