@@ -51,7 +51,8 @@ class Rectangle(BaseGeometry):
         return ("[Rectangle]" + str(self.width) + "/" + str(self.height))
       
 class Square(Rectangle):
-        """class Square that inherits from Rectangle
-        """
+    '''
+        class Square that inherits from Rectangle
+    '''
     def __init__(self, size):
         Rectangle.__init__(self, size, size)
