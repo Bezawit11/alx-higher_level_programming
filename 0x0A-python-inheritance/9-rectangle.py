@@ -12,15 +12,15 @@ class BaseGeometry:
         """
         Initialize
         """
-        self.__width = width
-        self.__height = height
+        self.width = width
+        self.height = height
 
     def area(self):
         """
         Public instance method: def area(self): that raises an
         Exception with the message area() is not implemented
         """
-        return self.__width * self.__height
+        return self.width * self.height
 
     def integer_validator(self, name, value):
         """Validate a parameter as an integer.
@@ -48,4 +48,4 @@ class Rectangle(BaseGeometry):
         
     def __str__(self):
         """returns the printable representation"""
-        return ("[Rectangle]" + str(self.__width) + "/" + str(self.__height))
+        return ("[Rectangle]" + str(self.width) + "/" + str(self.height))
