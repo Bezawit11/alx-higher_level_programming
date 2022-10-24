@@ -44,6 +44,16 @@ Handling a non-integer:
 	 ...
 	 TypeError: my_int must be an integer
 
+	 >>> bg.integer_validator("my_int", True)
+	 Traceback (most recent call last):
+	 ...
+	 TypeError: my_int must be an integer
+
+	 >>> bg.integer_validator("my_int", 3.7)
+	 Traceback (most recent call last):
+	 ...
+	 TypeError: my_int must be an integer
+
 Handling None object:
 	 >>> bg = BaseGeometry()
 
