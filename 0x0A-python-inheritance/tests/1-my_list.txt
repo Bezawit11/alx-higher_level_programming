@@ -54,27 +54,27 @@ Handling NULL bject:
 	     ...
 	 NameError: name 'NULL' is not defined
 	 
-Checking NaN object:
-	 >>> obj4 = MyList()
+Handling NaN object:
+	 >>> my_list = MyList()
 
-	 >>> obj4.append(NaN)
+	 >>> my_list.append(NaN)
 	 Traceback (most recent call last):
 	     ...
 	 NameError: name 'NaN' is not defined
 
-	 >>> print(obj4)
+	 >>> print(my_list)
 	 []
 
-	 >>> obj4.print_sorted()
+	 >>> my_list.print_sorted()
 	 []
 
-Checking None object:
-	 >>> obj5 = MyList()
+Handling None object:
+	 >>> my_list = MyList()
 
-	 >>> obj5.append(None)
+	 >>> my_list.append(None)
 
-	 >>> print(obj5)
+	 >>> print(my_list)
 	 [None]
 
-	 >>> obj5.print_sorted()
+	 >>> my_list.print_sorted()
 	 [None]
