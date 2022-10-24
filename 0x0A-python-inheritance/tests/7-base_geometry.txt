@@ -53,7 +53,12 @@ Handling a non-integer:
 	 Traceback (most recent call last):
 	 ...
 	 TypeError: my_int must be an integer
-
+	 
+	 >>> bg.integer_validator("my_int", (1, 2))
+	 Traceback (most recent call last):
+	 ...
+	 TypeError: my_int must be an integer
+	 
 Handling None object:
 	 >>> bg = BaseGeometry()
 
@@ -85,3 +90,9 @@ Handling more than two args:
 	 Traceback (most recent call last):
 	 ...
 	 TypeError: integer_validator() takes 3 positional arguments but 4 were given
+
+Handling a name that is not a string:
+	 >>> bg = BaseGeometry()
+
+	 >>> bg.integer_validator(2, 3)
+	 
