@@ -10,5 +10,4 @@ class MyList(list):
         '''
          prints the list, but sorted (ascending sort)
         '''
-        my_list.sort()
-        print(my_list)
+        print(sorted(self)
