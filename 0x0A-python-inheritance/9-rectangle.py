@@ -48,4 +48,4 @@ class Rectangle(BaseGeometry):
         
     def __str__(self):
         """returns the printable representation"""
-        return ("[Rectangle]" + str(self.width) + "/" + str(self.height))
+        return ("[Rectangle] " + str(self.width) + "/" + str(self.height))
