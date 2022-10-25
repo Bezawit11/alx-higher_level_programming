@@ -12,8 +12,8 @@ class BaseGeometry:
         """
         Initialize
         """
-        self.width = width
-        self.height = height
+        self.__width = width
+        self.__height = height
 
     def area(self):
         """
