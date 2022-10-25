@@ -60,4 +60,4 @@ class Square(Rectangle):
         
     def __str__(self):
         """returns the printable representation"""
-        return ("[Square]" + str(self.height) + "/" + str(self.width))
+        return ("[Square] " + str(self.height) + "/" + str(self.width))
