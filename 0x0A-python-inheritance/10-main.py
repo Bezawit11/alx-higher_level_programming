@@ -2,12 +2,8 @@
 
 Square = __import__('10-square').Square
 
-
-
-s = Square(13)
+Rectangle = __import__('9-rectangle').Rectangle
 
 
 
-print(s)
-
-print(s.area())
+print(issubclass(Square, Rectangle))
