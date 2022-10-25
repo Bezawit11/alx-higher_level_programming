@@ -1,13 +1,13 @@
 #!/usr/bin/python3
-"""python to JSON"""
+"""JSON rep"""
 
 
 import json
 
 
-def to_json_string(my_obj):
+def from_json_string(my_str):
     """
-       a function that returns the JSON
-       representation of an object (string):
+      a function that returns an object (Python data structure)
+      represented by a JSON string:
     """
-    return json.dumps(my_obj)
+    return json.dumps(my_str)
