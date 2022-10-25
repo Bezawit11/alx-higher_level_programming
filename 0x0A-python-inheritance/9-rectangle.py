@@ -44,9 +44,7 @@ class Rectangle(BaseGeometry):
     def __init__(self, width, height):
         self.integer_validator("width", width)
         self.integer_validator("height", height)
-        #BaseGeometry.__init__(self, width, height)
-        self.__width = width
-        self.__height = height
+        BaseGeometry.__init__(self, width, height)
   
     def __str__(self):
         """returns the printable representation"""
