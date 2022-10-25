@@ -25,6 +25,9 @@ Handling positive integers:
 	 
 	 >>> my_list.print_sorted()
 	 [1, 2, 3, 4, 5]
+	 
+	 >>> print(my_list)
+	 [4, 5, 2, 3, 1]
 
 Handling negative integers:
 	>>> my_list = MyList()
