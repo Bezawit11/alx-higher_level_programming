@@ -15,7 +15,7 @@ try:
 except:
     json_list = []
 
-for a in argv[1:]:
+for a in sys.argv[1:]:
     json_list.append(a)
 
 save_to_json_file(json_list, file)
