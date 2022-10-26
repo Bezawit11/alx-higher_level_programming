@@ -12,7 +12,7 @@ file = "add_item.json"
 
 try:
     json_list = load_from_json_file(file)
-except(e):
+except:
     json_list = []
 
 for a in sys.argv[1:]:
