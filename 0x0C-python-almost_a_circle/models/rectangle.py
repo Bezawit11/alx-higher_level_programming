@@ -70,5 +70,10 @@ class Rectangle(Base):
             for j in range(self.width):
                 print("#", end="")
             print()
+            
+     def to_dictionary(self):
+        return {'x': self.x, 'y': self.y, 'id': self.id,
+                'height': self.height, 'width': self.width}
+    
      def __str__(self):
         return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"    
