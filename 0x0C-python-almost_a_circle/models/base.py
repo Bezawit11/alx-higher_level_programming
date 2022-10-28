@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""Parent class"""
+
+import json
+
+
 class Base:
     """Base class"""
     __nb_objects = 0
