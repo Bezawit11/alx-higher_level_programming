@@ -28,7 +28,7 @@ class Base:
             with open( + ".json", "w") as file:
                 file.write([])
         else:
-            for i in range(list_objs):
+            for i in range(len(list_objs)):
                 list_objs[i] = cls.to_json_string(cls.to_dictionary())
             with open("sample.json", "w") as file:
                 file.write(list_objs)
