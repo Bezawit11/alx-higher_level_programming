@@ -77,6 +77,22 @@ class Rectangle(Base):
         return {'x': self.x, 'y': self.y, 'id': self.id,
                 'height': self.height, 'width': self.width}
     
+    def update(self, *args, **kwargs):
+        """assigns a key/value argument to attributes
+        """
+        if len(args) == 0:
+            for key, value in kwargs.items():
+                self.__setattr__(key, value)
+            return
+        try:
+            self.id = args[0]
+            self.width = args[1]
+            self.height = args[2]
+            self.x = args[3]
+            self.y = args[4]
+        except IndexError:
+            pass
+
     def __str__(self):
         """returns string representation of object
         """
