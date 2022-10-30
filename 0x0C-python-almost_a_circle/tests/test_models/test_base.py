@@ -9,21 +9,22 @@ from io import StringIO
 import pep8
 import json
 import os
-
+    
 class TestBase(unittest.TestCase):
-    def test_id(self):
-        Base._Base__nb_objects = 0
-        b1 = Base()
-        b2 = Base(12)
-        b3 = Base()
-        self.assertEqual(b1.id, 1)
-        self.assertEqual(b2.id, 12)
-        self.assertEqual(b3.id, 2)
-     
+    '''Tests the Base class.'''
     def test_nb_objects_private(self):
         """Tests if nb_objects is private class attribute"""
         self.assertTrue(hasattr(Base, "_Base__nb_objects"))
-     
+    
+    def test_id(self):
+        Base._Base__nb_objects = 0
+        b1 = Base(3)
+        b2 = Base(12)
+        b3 = Base(4)
+        self.assertEqual(b1.id, 3)
+        self.assertEqual(b2.id, 12)
+        self.assertEqual(b3.id, 4)
+        
     def test_nb_objects_initialized(self):
         '''Tests if nb_objects initializes to zero.'''
         self.assertEqual(getattr(Base, "_Base__nb_objects"), 0)
