@@ -64,7 +64,6 @@ class TestBase(unittest.TestCase):
          dictionary = dictionary.replace("'", '"')
          self.assertEqual(dictionary, json_dictionary)
      
-     def test_from_json_string(self):
          
             
 if __name__ == '__main__':
