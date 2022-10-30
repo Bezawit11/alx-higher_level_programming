@@ -27,6 +27,7 @@ class TestBase(unittest.TestCase):
         
     def test_nb_objects_initialized(self):
         '''Tests if nb_objects initializes to zero.'''
+        b = base()
         self.assertEqual(getattr(Base, "_Base__nb_objects"), 0)
      
     def test_id_count(self):
@@ -53,7 +54,7 @@ class TestBase(unittest.TestCase):
         a = [{'x': 2, 'y': 8, 'id': 1, 'height': 7, 'width': 10}]
         self.assertEqual(len(Base.to_json_string(a)), len(str(a)))
         a = [{}]
-        self.assertEqual(Base.to_json_string(d), '[{}]')
+        self.assertEqual(Base.to_json_string(a), '[{}]')
          
         r1 = Rectangle(10, 7, 2, 8)
         r2 = Rectangle(1, 2, 3, 4)
