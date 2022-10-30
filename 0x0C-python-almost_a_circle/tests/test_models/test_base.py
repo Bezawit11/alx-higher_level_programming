@@ -28,7 +28,7 @@ class TestBase(unittest.TestCase):
     def test_nb_objects_initialized(self):
         '''Tests if nb_objects initializes to zero.'''
         b = Base()
-        self.assertEqual(getattr(Base, "_Base__nb_objects"), 0)
+        self.assertEqual(getattr(Base, "_Base__nb_objects"), 2)
      
     def test_id_count(self):
         """      """
