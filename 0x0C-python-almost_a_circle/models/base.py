@@ -55,3 +55,16 @@ class Base:
                 l.append(json.loads(rep))
         with open(file, "w") as f:
             json.dump(l, f)
+    
+    @classmethod
+    def load_from_file(cls):
+        """returns an instance with all attributes already set
+        """
+        file = cls.__name__ + ".json"
+        if json.load(file) is None:
+            return []
+        m = from_json_string(json.load(file))
+        for a in m:
+            s = create(h)
+            l.append(s)
+        return l
