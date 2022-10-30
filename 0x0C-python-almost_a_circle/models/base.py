@@ -68,6 +68,6 @@ class Base:
             return []
         l = []
         for a in m:
-            s = create(**a)
+            s = cls.create(**a)
             l.append(s)
         return l
