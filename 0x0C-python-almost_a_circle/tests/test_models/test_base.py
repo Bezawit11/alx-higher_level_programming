@@ -31,7 +31,7 @@ class TestBase(unittest.TestCase):
      
     def test_id_count(self):
         """      """
-        b = Base(89)
+        b = Base()
         self.assertEqual(getattr(Base, "_Base__nb_objects"), b.id)
         
     def test_JSON(self):
@@ -47,7 +47,7 @@ class TestBase(unittest.TestCase):
         s = "to_json_string() missing 1 required positional argument: \
 'list_dictionaries'"
         self.assertEqual(str(e.exception), s)
-        self.assertEqual(Base.to_json_string(None), "[]")
+        self.assertEqual(Base.to_json_string(None), [])
         self.assertEqual(Base.to_json_string([]), "[]")
          
         a = [{'x': 2, 'y': 8, 'id': 1, 'height': 7, 'width': 10}]
