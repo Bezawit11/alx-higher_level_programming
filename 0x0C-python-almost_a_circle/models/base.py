@@ -61,10 +61,13 @@ class Base:
         """returns an instance with all attributes already set
         """
         file = cls.__name__ + ".json"
-        if json.load(file) is None:
+        try:
+            with open(file, encoding="UTF8") as f:
+                m = cls.from_json_string(f.read())
+        except:
             return []
-        m = from_json_string(json.load(file))
+        l = []
         for a in m:
-            s = create(h)
+            s = create(**a)
             l.append(s)
         return l
