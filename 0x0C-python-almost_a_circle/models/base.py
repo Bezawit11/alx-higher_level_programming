@@ -38,11 +38,14 @@ class Base:
         from models.square import Square
         from models.rectangle import Rectangle
 
-        if cls.__name__ == "Rectangle":
+        if cls is Rectangle:
             r = Rectangle(2, 4)
-        elif cls.__name__ == "Square":
+        elif cls is Square:
             r = Square(3)
-        return (r.update(**dictionary))
+        else:
+            r = None
+        r.update(**dictionary)
+        return r
 
     @classmethod
     def save_to_file(cls, list_objs):
