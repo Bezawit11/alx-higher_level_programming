@@ -12,43 +12,51 @@ class Rectangle(Base):
         self.height = height
         self.x = x
         self.y = y
+
     @property
     def width(self):
         """returns width"""
         return self.__width
+
     @width.setter
     def width(self, value):
         """width value setter"""
         self.validate(value, "width")
         self.__width = value
+
     @property
     def height(self):
         """returns height"""
         return self.__height
+
     @height.setter
     def height(self, value):
         """height value setter"""
         self.validate(value, "height")
         self.__height = value
+
     @property
     def x(self):
         """returns x"""
         return self.__x
+
     @x.setter
     def x(self, value):
         """x value setter"""
         self.validate(value, "x")
         self.__x = value
+
     @property
     def y(self):
         """returns y"""
         return self.__y
+
     @y.setter
     def y(self, value):
         """y value setter"""
         self.validate(value, "y")
         self.__y = value
-        
+
     @staticmethod
     def validate(ins, name):
         """validation of all setter methods and instantiation
@@ -60,12 +68,12 @@ class Rectangle(Base):
                 raise ValueError("{} must be > 0".format(name))
         elif ins < 0:
             raise ValueError("{} must be >= 0".format(name))
-    
+
     def area(self):
         """returns area of the rectangle
         """
         return self.width * self.height
-    
+
     def display(self):
         """prints in stdout the Rectangle
         """
@@ -76,13 +84,13 @@ class Rectangle(Base):
             for j in range(self.width):
                 print("#", end="")
             print()
-            
+
     def to_dictionary(self):
         """returns the dictionary representation of a Square
         """
         return {'x': self.x, 'y': self.y, 'id': self.id,
                 'height': self.height, 'width': self.width}
-    
+
     def update(self, *args, **kwargs):
         """assigns a key/value argument to attributes
         """
