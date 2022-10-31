@@ -47,8 +47,7 @@ class Rectangle(Base):
         
     @staticmethod
     def validate(ins, name):
-        """
-          validation of all setter methods and instantiation
+        """validation of all setter methods and instantiation
         """
         if not isinstance(ins, int):
             raise TypeError("{} must be an integer".format(name))
