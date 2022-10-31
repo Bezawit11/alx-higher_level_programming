@@ -7,6 +7,7 @@ import json
 class Base:
     """Base class"""
     __nb_objects = 0
+    
     def __init__(self, id=None):
         if id is not None:
             self.id = id
@@ -64,7 +65,7 @@ class Base:
         try:
             with open(file, encoding="UTF8") as f:
                 m = cls.from_json_string(f.read())
-        except:
+        except Exception:
             return []
         k = []
         for a in m:
