@@ -57,6 +57,8 @@ class Base:
             for a in list_objs:
                 rep = cls.to_json_string(a.to_dictionary())
                 k.append(json.loads(rep))
+        else:
+            k = []
         with open(file, "w") as f:
             json.dump(k, f)
 
