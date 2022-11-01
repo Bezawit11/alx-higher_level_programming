@@ -19,8 +19,6 @@ class TestSquare(unittest.TestCase):
         '''Cleans up after each test_method.'''
         pass
 
-    # ----------------- Tests for #2 ------------------------
-
     def test_A_class(self):
         '''Tests Square class type.'''
         self.assertEqual(str(Square),
