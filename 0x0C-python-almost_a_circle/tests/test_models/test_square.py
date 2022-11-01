@@ -114,43 +114,6 @@ were given"
         r = Square(2)
         self.assertEqual(r.id, 99)
 
-    def test_F_properties(self):
-        '''Tests property getters/setters.'''
-        r = Square(5, 9)
-        r.size = 98
-        r.x = 102
-        r.y = 103
-        d = {'_Rectangle__height': 98, '_Rectangle__width': 98,
-             '_Rectangle__x': 102, '_Rectangle__y': 103, 'id': 1}
-        self.assertEqual(r.__dict__, d)
-        self.assertEqual(r.size, 98)
-        self.assertEqual(r.x, 102)
-        self.assertEqual(r.y, 103)
-
-    # ----------------- Tests for #3 ------------------------
-
-    def invalid_types(self):
-        '''Returns tuple of types for validation.'''
-        t = (3.14, -1.1, float('inf'), float('-inf'), True, "str", (2,),
-             [4], {5}, {6: 7}, None)
-        return t
-
-    def test_G_validate_type(self):
-        '''Tests property validation.'''
-        r = Square(1)
-        attributes = ["x", "y"]
-        for attribute in attributes:
-            s = "{} must be an integer".format(attribute)
-            for invalid_type in self.invalid_types():
-                with self.assertRaises(TypeError) as e:
-                    setattr(r, attribute, invalid_type)
-                self.assertEqual(str(e.exception), s)
-        s = "width must be an integer"
-        for invalid_type in self.invalid_types():
-            with self.assertRaises(TypeError) as e:
-                setattr(r, "width", invalid_type)
-            self.assertEqual(str(e.exception), s)
-
     def test_G_validate_value_negative_gt(self):
         '''Tests property validation.'''
         r = Square(1, 2)
