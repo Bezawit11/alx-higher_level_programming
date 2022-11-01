@@ -48,7 +48,6 @@ class TestBase(unittest.TestCase):
     def test_docstrings(self):
         self.assertIsNotNone(Base.__doc__)
         self.assertIs(hasattr(Base, "__init__"), True)
-        self.assertIsNotNone(Base.__init__.__doc__)
         self.assertIs(hasattr(Base, "create"), True)
         self.assertIsNotNone(Base.create.__doc__)
         self.assertIs(hasattr(Base, "to_json_string"), True)
