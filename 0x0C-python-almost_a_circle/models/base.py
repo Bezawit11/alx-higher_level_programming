@@ -58,7 +58,7 @@ class Base:
                 rep = cls.to_json_string(a.to_dictionary())
                 k.append(json.loads(rep))
         else:
-            k = []
+            k = "[]"
         with open(file, "w") as f:
             json.dump(k, f)
 
