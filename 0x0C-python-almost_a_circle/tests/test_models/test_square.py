@@ -48,8 +48,8 @@ were given"
         r = Square(10)
         self.assertEqual(str(type(r)), "<class 'models.square.Square'>")
         self.assertTrue(isinstance(r, Base))
-        d = {'_Rectangle__height': 10, '_Rectangle__width': 10,
-             '_Rectangle__x': 0, '_Rectangle__y': 0, 'id': 1}
+        d = {'id': 1, '_Rectangle__width': 10, '_Rectangle__height': 10,
+             '_Rectangle__x': 0, '_Rectangle__y': 0, '_Square__size': 10}
         self.assertDictEqual(r.__dict__, d)
 
         with self.assertRaises(TypeError) as e:
