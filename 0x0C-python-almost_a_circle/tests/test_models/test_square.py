@@ -502,78 +502,7 @@ were given"
         s = "y must be >= 0"
         self.assertEqual(str(e.exception), s)
 
-    def test_L_update_kwargs(self):
-        '''Tests update() keyword args.'''
-        r = Square(5, 2)
-        d = r.__dict__.copy()
-
-        r.update(id=10)
-        d["id"] = 10
-        self.assertEqual(r.__dict__, d)
-
-        r.update(size=17)
-        d["_Rectangle__height"] = 17
-        d["_Rectangle__width"] = 17
-        self.assertEqual(r.__dict__, d)
-
-        r.update(x=20)
-        d["_Rectangle__x"] = 20
-        self.assertEqual(r.__dict__, d)
-
-        r.update(y=25)
-        d["_Rectangle__y"] = 25
-        self.assertEqual(r.__dict__, d)
-
-    def test_L_update_kwargs_2(self):
-        '''Tests update() keyword args.'''
-        r = Square(5, 2)
-        d = r.__dict__.copy()
-
-        r.update(id=10)
-        d["id"] = 10
-        self.assertEqual(r.__dict__, d)
-
-        r.update(id=10, size=5)
-        d["_Rectangle__height"] = 5
-        d["_Rectangle__width"] = 5
-        self.assertEqual(r.__dict__, d)
-
-        r.update(id=10, size=5, x=20)
-        d["_Rectangle__x"] = 20
-        self.assertEqual(r.__dict__, d)
-
-        r.update(id=10, size=5, x=20, y=25)
-        d["_Rectangle__y"] = 25
-        self.assertEqual(r.__dict__, d)
-
-        r.update(y=25, id=10, x=20, size=5)
-        self.assertEqual(r.__dict__, d)
-
-        Base._Base__nb_objects = 0
-        s1 = Square(5)
-        self.assertEqual(str(s1), "[Square] (1) 0/0 - 5")
-
-        s1.update(10)
-        self.assertEqual(str(s1), "[Square] (10) 0/0 - 5")
-
-        s1.update(1, 2)
-        self.assertEqual(str(s1), "[Square] (1) 0/0 - 2")
-
-        s1.update(1, 2, 3)
-        self.assertEqual(str(s1), "[Square] (1) 3/0 - 2")
-
-        s1.update(1, 2, 3, 4)
-        self.assertEqual(str(s1), "[Square] (1) 3/4 - 2")
-
-        s1.update(x=12)
-        self.assertEqual(str(s1), "[Square] (1) 12/4 - 2")
-
-        s1.update(size=7, y=1)
-        self.assertEqual(str(s1), "[Square] (1) 12/1 - 7")
-
-        s1.update(size=7, id=89, y=1)
-        self.assertEqual(str(s1), "[Square] (89) 12/1 - 7")
-
+    
     # ----------------- Tests for #14 ------------------------
     def test_M_to_dictionary(self):
         '''Tests to_dictionary() signature:'''
