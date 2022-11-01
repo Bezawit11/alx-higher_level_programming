@@ -26,13 +26,6 @@ class TestBase(unittest.TestCase):
         '''Tests if nb_objects initializes to zero.'''
         self.assertEqual(getattr(Base, "_Base__nb_objects"), 0)
 
-    def test_C_instantiation(self):
-        '''Tests Base() instantiation.'''
-        b = Base()
-        self.assertEqual(str(type(b)), "<class 'models.base.Base'>")
-        self.assertEqual(b.__dict__, {"id": 1})
-        self.assertEqual(b.id, 1)
-
     def test_D_constructor(self):
         '''Tests constructor signature.'''
         with self.assertRaises(TypeError) as e:
