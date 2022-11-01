@@ -90,13 +90,13 @@ were given"
     def test_D_instantiation_positional(self):
         '''Tests positional instantiation.'''
         r = Square(5, 10, 15)
-        d = {'_Rectangle__height': 5, '_Rectangle__width': 5,
-             '_Rectangle__x': 10, '_Rectangle__y': 15, 'id': 1}
+        d = {'id': 1, '_Rectangle__width': 5, '_Rectangle__height': 5,
+             '_Rectangle__x': 10, '_Rectangle__y': 15, '_Square__size': 5}
         self.assertEqual(r.__dict__, d)
 
         r = Square(5, 10, 15, 20)
-        d = {'_Rectangle__height': 5, '_Rectangle__width': 5,
-             '_Rectangle__x': 10, '_Rectangle__y': 15, 'id': 20}
+        d = {'id': 20, '_Rectangle__width': 5, '_Rectangle__height': 5,
+             '_Rectangle__x': 10, '_Rectangle__y': 15, '_Square__size': 5}
         self.assertEqual(r.__dict__, d)
 
 if __name__ == "__main__":
