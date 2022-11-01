@@ -44,14 +44,6 @@ class TestBase(unittest.TestCase):
         b = Base()
         self.assertEqual(getattr(Base, "_Base__nb_objects"), b.id)
 
-    def test_F_id_synced_more(self):
-        '''Tests sync between class and instance id.'''
-        b = Base()
-        b = Base("Foo")
-        b = Base(98)
-        b = Base()
-        self.assertEqual(getattr(Base, "_Base__nb_objects"), b.id)
-
     def test_G_custom_id_int(self):
         '''Tests custom int id.'''
         i = 98
