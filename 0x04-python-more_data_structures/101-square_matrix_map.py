@@ -1,10 +1,3 @@
 #!/usr/bin/python3
 def square_matrix_map(matrix=[]):
-    if matrix is None:
-        return None
-    r = []
-    for i in range(len(matrix[0])):
-        k = list(map(lambda x: x[i]*x[i], matrix))
-        r.append(k)
-    new = [[r[j][i] for j in range(len(r))] for i in range(len(r[0]))]
-    return new
+    return list(map(lambda x: [x[0] * x[0], x[1] * x[1], x[2] * x[2]], matrix))
