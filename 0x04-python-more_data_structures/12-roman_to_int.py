@@ -17,6 +17,8 @@ def roman_to_int(roman_string):
                     sum -= 1
                 else:
                     sum += 1
+            else:
+                sum += 1      
         elif roman_string[i] == "V":
             sum += 5
         elif roman_string[i] == "X":
