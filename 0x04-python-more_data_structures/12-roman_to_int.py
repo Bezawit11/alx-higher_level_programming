@@ -12,7 +12,11 @@ def roman_to_int(roman_string):
         return 9
     for i in range (len(roman_string)):
         if roman_string[i] == "I":
-           sum += 1
+            if len(roman_string) - 1 > i:
+                if roman_string[i + 1] == "X" or roman_string[i + 1] == "V":
+                    sum -= 1
+                else:
+                    sum += 1
         elif roman_string[i] == "V":
             sum += 5
         elif roman_string[i] == "X":
