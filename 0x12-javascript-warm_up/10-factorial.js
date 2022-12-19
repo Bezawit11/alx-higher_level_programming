@@ -9,5 +9,5 @@ if (isNaN(parseInt(process.argv[2]))){
   console.log("1")
 }
 else{
- factorial(parseInt(process.argv[2]))
+ console.log(factorial(parseInt(process.argv[2])))
 }
