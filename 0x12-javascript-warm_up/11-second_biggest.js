@@ -10,7 +10,7 @@ return b[1]
 }
 
 if (isNaN(parseInt(process.argv[2])) || isNaN(parseInt(process.argv[3]))){
-  console.log("0")
+  console.log(0)
 }
 else{
 console.log(second_biggest(process.argv))
