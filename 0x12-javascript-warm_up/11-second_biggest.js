@@ -4,7 +4,7 @@ function SecondBiggest (arr) {
   for (let i = 2; i < arr.length; i++) {
     b[i - 2] = parseInt(arr[i]);
   }
-  b.sort(function(a, b){return a - b});
+  b.sort(function (a, b) { return a - b; });
   b.reverse();
   return b[1];
 }
