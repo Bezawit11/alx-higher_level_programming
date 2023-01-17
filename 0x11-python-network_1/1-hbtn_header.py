@@ -6,7 +6,6 @@
 if __name__ == '__main__':
     import sys
     from urllib.request import urlopen
-    with urlopen(sys.argv) as response:
+    with urlopen(sys.argv[1]) as response:
         pass
-    response.headers["X-Request-Id"]
- 
+    print(response.headers["X-Request-Id"])
