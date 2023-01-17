@@ -9,6 +9,6 @@ if __name__ == '__main__':
     import sys
     values = {}
     values['email'] = sys.argv[2]
-    r = requests.get(sys.argv[1], params=values)
-    print(r.url)
+    r = requests.post(sys.argv[1], data=values)
+    print(r.text)
     
