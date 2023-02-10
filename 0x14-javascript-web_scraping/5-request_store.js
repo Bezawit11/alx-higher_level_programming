@@ -2,7 +2,9 @@
 const fs = require('fs');
 const r = require('request');
 r(process.argv[2], function (error, response, body) {
-fs.writeFile(JSON.parse(body), process.argv[3], (err) => {
+b = response['body'];
+console.log(b);
+fs.writeFile(str(b), process.argv[3], 'utf-8', (err) => {
 if (err) throw err;
 });
 });
