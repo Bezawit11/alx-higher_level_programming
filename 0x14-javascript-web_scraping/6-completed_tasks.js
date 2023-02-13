@@ -27,6 +27,7 @@ r(process.argv[2], function (error, response, body) {
         b = info[i]['userId']
     }
     }
-    d[b] = count
+    if (count != 0){
+    d[b] = count}
 console.log(d)}
 });
