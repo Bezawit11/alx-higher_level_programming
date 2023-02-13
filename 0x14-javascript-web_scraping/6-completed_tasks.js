@@ -13,7 +13,7 @@ r(process.argv[2], function (error, response, body) {
   } else {
     let b = info[0].userId;
     for (let i = 0; i < info.length; i++) {
-      let a = info[i].userId;
+      const a = info[i].userId;
       if (info[i].userId === b) {
         if (info[i].completed === true) {
           count += 1;
