@@ -17,7 +17,12 @@ r(process.argv[2], function (error, response, body) {
     }
     else {
         if (count != 0){
-        d[b] = count}
+        if (d[b] > 0){
+        d[b] = d[b] + count}
+        else{
+            d[b] = count
+        }
+        }
         if (info[i]['completed'] == true){
             count = 1
         }
@@ -28,6 +33,10 @@ r(process.argv[2], function (error, response, body) {
     }
     }
     if (count != 0){
-    d[b] = count}
+    if (d[b] > 0){
+        d[b] = d[b] + count}
+        else{
+            d[b] = count
+        }}
 console.log(d)}
 });
