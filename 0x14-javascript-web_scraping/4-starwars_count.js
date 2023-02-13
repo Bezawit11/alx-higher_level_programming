@@ -3,7 +3,7 @@ const r = require('request');
 r(process.argv[2], function (error, response, body) {
   const info = JSON.parse(body);
   let count = 0;
-  let a = []
+  let a = [];
   if (error) {
     console.error(error);
     return;
