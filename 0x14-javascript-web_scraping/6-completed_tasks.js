@@ -4,6 +4,10 @@ r(process.argv[2], function (error, response, body) {
   const info = JSON.parse(body);
   let count = 0
   let d = {}
+  if (info.length == 0){
+    console.log(d)
+}
+  else{
   let b = info[0]['userId']
     for (let i = 0; i < info.length; i++){
         a = info[i]['userId']
@@ -24,5 +28,5 @@ r(process.argv[2], function (error, response, body) {
     }
     }
     d[b] = count
-console.log(d)
+console.log(d)}
 });
