@@ -11,10 +11,9 @@ r(process.argv[2], function (error, response, body) {
   if (info.length === 0) {
     console.log(d);
   } else {
-    let a = 0;
     let b = info[0].userId;
     for (let i = 0; i < info.length; i++) {
-      a = info[i].userId;
+      let a = info[i].userId;
       if (info[i].userId === b) {
         if (info[i].completed === true) {
           count += 1;
@@ -28,8 +27,7 @@ r(process.argv[2], function (error, response, body) {
           }
         }
         if (info[i].completed === true) {
-          if (a === a){
-          count = 1;}
+          count = 1;
         } else {
           count = 0;
         }
