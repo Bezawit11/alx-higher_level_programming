@@ -12,7 +12,8 @@ r(process.argv[2], function (error, response, body) {
         count += 1}
     }
     else {
-        d[b] = count
+        if (count != 0){
+        d[b] = count}
         if (info[i]['completed'] == true){
             count = 1
         }
