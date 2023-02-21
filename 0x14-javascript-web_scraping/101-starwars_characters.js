@@ -8,12 +8,12 @@ r('https://swapi-api.alx-tools.com/api/films/' + process.argv[2], function (erro
   const info = JSON.parse(body);
   for (let i = 0; i < info.characters.length; i++) {
     const req = require('request');
-    req(info.characters[i], async function (error, response, body) {
+    req(info.characters[i], function (error, response, body) {
       if (error) {
         console.error(error);
         return;
       }
-      const chars = await JSON.parse(body);
+      const chars = JSON.parse(body);
       console.log(chars.name);
     });
   }
