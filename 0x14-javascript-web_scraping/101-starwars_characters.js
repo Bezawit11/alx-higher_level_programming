@@ -16,5 +16,5 @@ r('https://swapi-api.alx-tools.com/api/films/' + process.argv[2], function (erro
       const chars = JSON.parse(body);
       console.log(chars.name);
     });
-}
+  }
 });
