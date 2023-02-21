@@ -6,7 +6,7 @@ r('https://swapi-api.alx-tools.com/api/films/' + process.argv[2], function (erro
     return;
   }
   const info = JSON.parse(body);
-  for (let i = 0; i < info.characters.length; i++) {
+  for (let i = 0; i < info['characters'].length; i++) {
     const req = require('request');
     req(info.characters[i], async function (error, response, body) {
       if (error) {
