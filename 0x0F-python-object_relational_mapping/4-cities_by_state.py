@@ -12,6 +12,6 @@ if __name__ == "__main__":
     cursor.execute("SELECT * FROM cities ORDER BY id ASC")
     rows = cursor.fetchall()
     for row in rows:
-        print(row)
+        print(row[0], row[2], row[1])
     cursor.close()
     db.close()
