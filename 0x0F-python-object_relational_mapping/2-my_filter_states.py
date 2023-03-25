@@ -12,7 +12,6 @@ if __name__ == "__main__":
     cursor.execute("SELECT * FROM states ORDER BY id ASC WHERE name=argv[4]")
     rows = cursor.fetchall()
     for row in rows:
-        if row[1].startswith('N'):
-            print(row)
+        print(row)
     cursor.close()
     db.close()
